@@ -5,7 +5,7 @@ Home: https://github.com/johntruckenbrodt/pyroSAR
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python Framework for Large-Scale SAR Satellite Data Processing
 
