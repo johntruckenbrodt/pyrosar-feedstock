@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.0
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.0
     - gdal >=2.2
     - spatialist >=0.5
     - progressbar2
