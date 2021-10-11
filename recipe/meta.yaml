@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.0
-    - gdal >=2.2
+    - gdal =2.4.*
     - spatialist >=0.8
     - progressbar2
     - pathos >=0.2
