@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.0
-    - gdal =2.4.*
+    - gdal >=2.4
     - spatialist >=0.8
     - progressbar2
     - pathos >=0.2
