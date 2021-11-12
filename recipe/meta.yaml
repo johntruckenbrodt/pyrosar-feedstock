@@ -24,7 +24,6 @@ requirements:
     - gdal >=2.4
     - spatialist >=0.8
     - progressbar2
-    - pathos >=0.2
     - numpy
     - pyyaml
     - requests
