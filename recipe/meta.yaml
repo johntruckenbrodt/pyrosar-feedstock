@@ -40,7 +40,8 @@ test:
   imports:
     - pyroSAR
   commands:
-    - pytest --ignore=tests/test_snap.py --ignore=tests/test_drivers.py
+    # test_auxdata.py temporarily ignored due to TDX90m DEM expired SSL certificate
+    - pytest --ignore=tests/test_snap.py --ignore=tests/test_drivers.py --ignore=tests/test_auxdata.py
 
 about:
   home: https://github.com/johntruckenbrodt/pyroSAR
