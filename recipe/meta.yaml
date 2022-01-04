@@ -1,5 +1,5 @@
 {% set name = "pyroSAR" %}
-{% set version = "0.14" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1aa90fb3f874b11ff37f7b54f43a8b6b9574f4eee27156a3dc3d63fce465a02d
+  sha256: ca8f477fc8aafa46da29f901e5f72d298d6e1ae45bd622ccbea012083c11b6ba
 
 build:
   noarch: python
@@ -28,19 +28,19 @@ requirements:
     - pyyaml
     - requests
     - psycopg2
-    - sqlalchemy <1.4
-    - sqlalchemy-utils
+    - sqlalchemy >=1.4
+    - sqlalchemy-utils >=0.37
     - geoalchemy2
 
 test:
   source_files:
-    - pyroSAR/tests
+    - tests
   requires:
     - pytest
   imports:
     - pyroSAR
   commands:
-    - pytest --ignore=pyroSAR/tests/test_snap.py --ignore=pyroSAR/tests/test_drivers.py
+    - pytest --ignore=tests/test_snap.py --ignore=tests/test_drivers.py
 
 about:
   home: https://github.com/johntruckenbrodt/pyroSAR
