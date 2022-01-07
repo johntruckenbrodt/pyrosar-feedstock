@@ -1,5 +1,5 @@
 {% set name = "pyroSAR" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca8f477fc8aafa46da29f901e5f72d298d6e1ae45bd622ccbea012083c11b6ba
+  sha256: 78276d8b345174deeac70ffdefc54928152da7a06771ee1a91182db2ed8022cb
 
 build:
   noarch: python
@@ -40,8 +40,7 @@ test:
   imports:
     - pyroSAR
   commands:
-    # test_auxdata.py temporarily ignored due to TDX90m DEM expired SSL certificate
-    - pytest --ignore=tests/test_snap.py --ignore=tests/test_drivers.py --ignore=tests/test_auxdata.py
+    - pytest --ignore=tests/test_snap.py --ignore=tests/test_drivers.py
 
 about:
   home: https://github.com/johntruckenbrodt/pyroSAR
