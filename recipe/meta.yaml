@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.0
     - gdal >=2.4
-    - spatialist >=0.10.1
+    - spatialist >=0.11.0
     - progressbar2
     - numpy
     - pyyaml
