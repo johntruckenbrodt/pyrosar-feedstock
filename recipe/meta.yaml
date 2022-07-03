@@ -1,5 +1,5 @@
 {% set name = "pyroSAR" %}
-{% set version = "0.17.2" %}
+{% set version = "0.17.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dda9bf8c3fb555e5f685909632432829efa3afee9d131bcc42583579120625c6
+  sha256: 5910486cd0398017039671633ade93870828ef29cb20affe86590a0b06f15188
 
 build:
   noarch: python
@@ -31,6 +31,7 @@ requirements:
     - sqlalchemy >=1.4
     - sqlalchemy-utils >=0.37
     - geoalchemy2
+    - lxml
 
 test:
   imports:
