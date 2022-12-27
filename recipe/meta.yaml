@@ -1,5 +1,5 @@
 {% set name = "pyroSAR" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b7fa8dcb9909f22cb9e333b06bea029989bee6d4043415973c8bd7e7bb2765c
+  sha256: d0538c9fca715c18c96964e65adcad4faa1400b90eecc585ad358bae12baabc6
 
 build:
   noarch: python
