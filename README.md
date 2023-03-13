@@ -1,11 +1,11 @@
-About pyrosar
-=============
+About pyrosar-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyrosar-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/johntruckenbrodt/pyroSAR
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyrosar-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python Framework for Large-Scale SAR Satellite Data Processing
 
