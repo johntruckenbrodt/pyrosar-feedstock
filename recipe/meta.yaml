@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -30,7 +30,7 @@ requirements:
     - psycopg2
     - sqlalchemy >=1.4,<2.0
     - sqlalchemy-utils >=0.37
-    - geoalchemy2
+    - geoalchemy2 <0.14.0
     - pillow
     - lxml
 
