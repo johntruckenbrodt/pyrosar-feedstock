@@ -34,7 +34,7 @@ requirements:
     - pillow
     - lxml
     - packaging
-    - libspatialite>=5.1.0
+    - libspatialite >=5.1.0
 
 test:
   imports:
