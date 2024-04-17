@@ -11,7 +11,7 @@ Summary: A Python Framework for Large-Scale SAR Satellite Data Processing
 
 Development: https://github.com/johntruckenbrodt/pyroSAR
 
-Documentation: https://pyroSAR.readthedocs.io
+Documentation: https://pyrosar.readthedocs.io
 
 The pyroSAR package aims at providing a complete solution for the scalable organization and processing of SAR satellite data.
 

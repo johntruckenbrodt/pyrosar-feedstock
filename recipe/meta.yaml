@@ -1,13 +1,13 @@
-{% set name = "pyroSAR" %}
-{% set version = "0.24.0" %}
+{% set name = "pyrosar" %}
+  {% set version = "0.25.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6ecd0859158abde03085355784918111a729e854e59d2ba2a23a2f16bb4366be
+  sha256: 9a33053b3756f4b71460a1394d780ba308307c7ceb9448bce58a32b5f4d08918
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.6,<3.11
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >=3.6,<3.11
     - gdal >=2.4
     - spatialist >=0.12.1
     - progressbar2
@@ -33,6 +33,8 @@ requirements:
     - geoalchemy2 <0.14.0
     - pillow
     - lxml
+    - packaging
+    - libspatialite >=5.1.0
 
 test:
   imports:
@@ -47,7 +49,7 @@ about:
 
   description: |
     The pyroSAR package aims at providing a complete solution for the scalable organization and processing of SAR satellite data.
-  doc_url: https://pyroSAR.readthedocs.io
+  doc_url: https://pyrosar.readthedocs.io
   dev_url: https://github.com/johntruckenbrodt/pyroSAR
 
 extra:
