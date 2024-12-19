@@ -1,5 +1,5 @@
 {% set name = "pyrosar" %}
-  {% set version = "0.26.1" %}
+  {% set version = "0.27.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 73d0fe7c38142117d2e1b77190d87c80354c527958425137f605a0c6c30353e7
+  sha256: 73279952e7f9058597e382e95ae79a4bc9b3df81672511c961e43d9cf0e28e3d
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.11
+    - python >=3.8
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.6,<3.11
+    - python >=3.8
     - gdal >=2.4
     - spatialist >=0.12.1
     - progressbar2
