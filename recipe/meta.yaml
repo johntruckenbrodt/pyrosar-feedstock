@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 73279952e7f9058597e382e95ae79a4bc9b3df81672511c961e43d9cf0e28e3d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - gdal >=2.4
     - spatialist >=0.12.1
     - progressbar2
@@ -38,6 +38,8 @@ requirements:
     - libspatialite >=5.1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyroSAR
 
