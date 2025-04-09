@@ -1,5 +1,5 @@
 {% set name = "pyrosar" %}
-  {% set version = "0.28.0" %}
+{% set version = "0.29.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d937fd99d98d335bd830c1af33476453be1daa792c07de3555c1287ed17cd37b
+  sha256: 3af56482adab590db1680565daac4525aed6a658e4451f5a486b313a1ef3019c
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - gdal >=2.4
-    - spatialist >=0.12.1
+    - spatialist >=0.15.0
     - progressbar2
     - numpy <2.0
     - pyyaml
