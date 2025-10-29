@@ -39,12 +39,13 @@ requirements:
     - sqlalchemy-utils >=0.37,<0.42
 
 test:
+  imports:
+    - pyroSAR
+  commands:
+    - pip check
   requires:
     - python {{ python_min }}
     - pip
-  imports:
-    - pyroSAR
-  pip_check: true
 
 about:
   home: https://github.com/johntruckenbrodt/pyroSAR
