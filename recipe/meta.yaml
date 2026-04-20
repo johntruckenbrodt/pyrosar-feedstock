@@ -1,5 +1,5 @@
 {% set name = "pyrosar" %}
-{% set version = "0.36.1" %}
+{% set version = "0.36.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: de6b484f274bf2498bbde1b09fdcbb8b6b62e8ab67bda403b77a833dd3cc8bd2
+  sha256: 2fbf9a812a1f853bfcff6eedd9243a3904206cbb5e73fbdd150c50846e3ab763
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.11
     - pip
     - setuptools
     - setuptools_scm
@@ -31,10 +31,10 @@ requirements:
     - pillow
     - progressbar2
     - psycopg2
-    - python >={{ python_min }}
+    - python >=3.11
     - pyyaml
     - requests
-    - spatialist >=0.16.2
+    - spatialist >=0.17.0
     - sqlalchemy >=1.4,<2.0
     - sqlalchemy-utils >=0.37,<0.42
 
@@ -44,7 +44,7 @@ test:
   commands:
     - pip check
   requires:
-    - python {{ python_min }}
+    - python >=3.11
     - pip
 
 about:
