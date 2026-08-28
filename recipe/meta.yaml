@@ -1,5 +1,5 @@
 {% set name = "pyrosar" %}
-{% set version = "0.38.0" %}
+{% set version = "0.39.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: df557b241250e77d7ac46c598dd30786862c6f08d2b8f5fe4358f8970d1044fb
+  sha256: 1b76c3926e326f44f293c64bb02f39720ca394a78b9e3cacbdc7891ce68034e2
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - geoalchemy2 >=0.14.0
     - libgdal
     - libspatialite >=5.1.0
+    - libxml2 <2.14
     - lxml
     - numpy
     - packaging
@@ -35,7 +36,7 @@ requirements:
     - python >=3.11
     - pyyaml
     - requests
-    - spatialist >=0.17.0
+    - spatialist >=0.20.1
     - sqlalchemy >=1.4
     - sqlalchemy-utils >=0.37,<0.42
 
